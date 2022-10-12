@@ -29,11 +29,6 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ErrorBoundary FallbackComponent={RootErrorFallback}>
       {getLayout(<Component {...pageProps} />)}
-
-      <Script
-        src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=UcFfxu"
-        strategy="lazyOnload"
-      />
     </ErrorBoundary>
   )
 }

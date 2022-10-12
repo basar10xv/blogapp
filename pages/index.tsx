@@ -7,6 +7,7 @@ import logout from "app/auth/mutations/logout"
 import logo from "public/logo.png"
 import { useMutation } from "@blitzjs/rpc"
 import { Routes, BlitzPage } from "@blitzjs/next"
+import Script from "next/script"
 
 /*
  * This file is just for a pleasant getting started page for your new app.
@@ -133,6 +134,11 @@ const Home: BlitzPage = () => {
             Powered by Blitz.js
           </a>
         </footer>
+
+        <Script
+          src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=UcFfxu"
+          strategy="lazyOnload"
+        />
       </div>
     </Layout>
   )
