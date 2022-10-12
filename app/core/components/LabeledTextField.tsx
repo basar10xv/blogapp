@@ -19,7 +19,7 @@ export const LabeledTextField = forwardRef<HTMLInputElement, LabeledTextFieldPro
       formState: { isSubmitting, errors },
     } = useFormContext()
     const error = Array.isArray(errors[name])
-      ? errors[name].join(", ")
+      ? String(errors[name])
       : errors[name]?.message || errors[name]
 
     return (
@@ -34,23 +34,6 @@ export const LabeledTextField = forwardRef<HTMLInputElement, LabeledTextFieldPro
             {error}
           </div>
         )}
-
-        <style jsx>{`
-          label {
-            display: flex;
-            flex-direction: column;
-            align-items: start;
-            font-size: 1rem;
-          }
-          input {
-            font-size: 1rem;
-            padding: 0.25rem 0.5rem;
-            border-radius: 3px;
-            border: 1px solid purple;
-            appearance: none;
-            margin-top: 0.5rem;
-          }
-        `}</style>
       </div>
     )
   }
