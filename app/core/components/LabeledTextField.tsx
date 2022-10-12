@@ -18,9 +18,11 @@ export const LabeledTextField = forwardRef<HTMLInputElement, LabeledTextFieldPro
       register,
       formState: { isSubmitting, errors },
     } = useFormContext()
-    const error = Array.isArray(errors[name])
-      ? String(errors[name])
-      : errors[name]?.message || errors[name]
+    // const error = Array.isArray(errors[name])
+    //   ? String(errors[name])
+    //   : errors[name]?.message || errors[name]
+
+    const error = ""
 
     return (
       <div {...outerProps}>
